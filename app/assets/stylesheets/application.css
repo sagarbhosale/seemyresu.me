@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+a:hover, a:focus {
+   background-color: transparent !important;
+}
+
+.content a {
+	border: 1px dotted transparent;
+}
+
+.content a:hover, .content a:focus {
+	color: navy;
+	text-decoration: none;
+	border-bottom: 1px dotted #333;
+	border-radius: 5px;
+}
+
+.content
+{
+	margin-top:40px;	
+}
+
+.userbar
+{
+	line-height: 40px;
+	color: #aaa;
+}
+
+ul.sidebox
+{
+	list-style:none;
+	margin:10px 0;
+	padding:10px;
+}
+
+ul.sidebox li.sideheader
+{
+	font-weight: bold;
+	border-bottom: 1px dotted #aaa;
+}

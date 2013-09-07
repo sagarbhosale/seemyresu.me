@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SeeMyResu.me</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+
+<% flash.each do |key, msg| %>
+  noty({text: '<%= msg %>', type: '<%= key %>'});
+<% end %>
+});
+</script>
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="/">SeeMyResu.me</a>
+			<div class="nav-collapse collapse">
+
+<% if (session[:user_id]) %>
+<span class ="userbar pull-right">
+        Hi, <%= User.find(session[:user_id]).firstname %>
+        |
+        <%= link_to "logout", "/logout" %>
+</span>
+<% else %>
+        <%= form_tag("/authenticate", method: "post", :class => "navbar-form pull-right") do %>
+          <%= text_field_tag 'email', nil, class: 'span3', placeholder: 'email' %>
+          <%= password_field_tag 'password', nil, class: 'span2', placeholder: 'password' %>
+          <%= submit_tag 'Login', class: 'btn btn-primary' %>
+        <% end %>
+<% end %>
+    	</div>
+		</div>
+	</div>
+</div>
+
+<div class="container content">
+<% if (session[:user_id]) %>
+  <div id="leftwing" class="pull-left span2" style="margin:0;">
+
+    <ul class="well sidebox">
+      <li class="sideheader">
+          Edit Content
+      </li>
+      <li>
+        <%= link_to "Basic", "/basics" %>
+      </li>
+      <li>
+        <%= link_to "Skills", "/skills" %>
+      </li>
+      <li>
+        <%= link_to "Achievements", "/achievements" %>
+      </li>
+      <li>
+        <%= link_to "Academics", "/schools" %>
+      </li>
+      <li>
+        <%= link_to "Experience", "/experiences" %>
+      </li>
+    </ul>
+
+    <ul class="well sidebox">
+      <li class="sideheader">
+          Settings
+      </li>
+      <li>
+        <%= link_to "Template", "" %>
+      </li>
+      <li>
+        <%= link_to "Sharing", "" %>
+      </li>
+      <li>
+        <%= link_to "Change Password", "" %>
+      </li>
+    </ul>
+
+  </div>
+<% end %>
+
+<% if (session[:user_id]) %>
+
+  <div id="centerstage" class="pull-left span8" style="padding:20px;margin:0">
+    <%= yield %>
+  </div>
+
+<% else %>
+    <%= yield %>
+<% end %>
+
+<% if (session[:user_id]) %>
+
+  <div id="rightwing" class="pull-right span2" style="margin:0">
+    <ul class="well sidebox">
+      <li class="sideheader">
+          Statistics
+      </li>
+      <li>
+        Views
+        <%= Resume.find(session[:user_id]).views %>
+      </li>
+      <li>
+        Likes
+        <%= Resume.find(session[:user_id]).likes %>
+      </li>
+      <li>
+        Contact Requests
+      </li>
+    </ul>
+
+  </div>
+<% end %>
+
+      <hr>
+
+      <footer style="clear:both">
+        <p>Home | About | Privacy policy | Terms of Use | Contact Us</p>
+      </footer>
+
+</div>
+
+
+</body>
+</html>

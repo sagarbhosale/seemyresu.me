@@ -1,0 +1,113 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @resume %>
+</p>
+
+<p>
+  <b>Likes:</b>
+  <%= @resume.likes %>
+</p>
+
+<p>
+  <b>Views:</b>
+  <%= @resume.views %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @resume.basic.firstname %>
+  <%= @resume.basic.lastname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @resume.basic.email %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @resume.basic.mobile %>
+</p>
+
+<p>
+  <b>Achievements</b>
+  <% @resume.achievements.each do |a| %>
+  <table>
+    <tr>
+      <td>
+  <%= a.year %>
+      </td>
+      <td>
+  <%= a.description %>
+      </td>
+    </tr>
+  </table>
+  <% end %>
+</p>
+
+<p>
+  <b>Acedemics</b>
+  <% @resume.schools.each do |a| %>
+  <table>
+    <tr>
+      <td>
+  <%= a.from %>
+      </td>
+      <td>
+  <%= a.to %>
+      </td>
+      <td>
+  <%= a.name %>
+      </td>
+      <td>
+  <%= link_to a.website, a.website %>
+      </td>
+      <td>
+  <%= a.desc %>
+      </td>
+    </tr>
+  </table>
+  <% end %>
+</p>
+
+<p>
+  <b>Experience</b>
+  <% @resume.experiences.each do |a| %>
+  <table>
+    <tr>
+      <td>
+  <%= a.from %>
+      </td>
+      <td>
+  <%= a.to %>
+      </td>
+      <td>
+  <%= a.name %>
+      </td>
+      <td>
+  <%= link_to a.website, a.website %>
+      </td>
+      <td>
+  <%= a.desc %>
+      </td>
+    </tr>
+  </table>
+  <% end %>
+</p>
+
+<p>
+  <b>Skills</b>
+  <% @resume.skills.each do |a| %>
+  <table>
+    <tr>
+      <td>
+  <%= SkillCategory.find(a.skill_category_id).name %>: <%= a.name %>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </table>
+  <% end %>
+</p>

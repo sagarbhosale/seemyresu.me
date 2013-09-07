@@ -1,0 +1,29 @@
+<h1>Listing basics</h1>
+
+<table>
+  <tr>
+    <th>Resume</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @basics.each do |basic| %>
+  <tr>
+    <td><%= basic.resume_id %></td>
+    <td><%= basic.firstname %></td>
+    <td><%= basic.lastname %></td>
+    <td><%= basic.email %></td>
+    <td><%= basic.mobile %></td>
+    <td><%= link_to 'Show', basic %></td>
+    <td><%= link_to 'Edit', edit_basic_path %></td>
+    <td><%= link_to 'Destroy', basic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

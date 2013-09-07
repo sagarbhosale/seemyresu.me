@@ -1,0 +1,10 @@
+	<% @skills.each do |s| %>
+		<span style="margin:5px;border:1px solid #aaa;padding:5px;border-radius:10px;">
+		    <%= s.name %>
+		    <%= link_to image_tag("delete.png", :border => 0, :size => "10x10"), s, method: :delete, data: { confirm: 'Are you sure?' }, class: "btnTokenClose" %>
+		</span>
+	<% end %>
+<br/>
+<hr/>
+
+<%= render 'form' %>

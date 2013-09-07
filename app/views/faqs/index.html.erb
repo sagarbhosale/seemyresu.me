@@ -1,0 +1,22 @@
+<h1>FAQs</h1>
+
+<% @faqs.each do |faq| %>
+    <br/>
+    <b>
+      <%= faq.question %>
+    </b>
+    <p style="text-align:justify">
+      <%= faq.answer %>
+    </p>
+    <% if false %>
+    <td><%= link_to 'Show', faq %></td>
+    <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
+    <td><%= link_to 'Destroy', faq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+<% end %>
+
+<br />
+
+<% if false %>
+  <%= link_to 'New Faq', new_faq_path %>
+<% end %>

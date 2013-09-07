@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  resume_id: 1
+  from: 2013-09-04
+  to: 2013-09-04
+  name: MyString
+  website: MyString
+  desc: MyString
+
+two:
+  resume_id: 1
+  from: 2013-09-04
+  to: 2013-09-04
+  name: MyString
+  website: MyString
+  desc: MyString
