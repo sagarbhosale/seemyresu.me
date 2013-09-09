@@ -23,9 +23,9 @@
         </div>
 
         <div class="span7">
+          <% t = @testimonials.first %>
           	<h3>Testimonial</h3>
-			<p>"I have spent days in trying to make my personal website.
-While searching for alternative approaches, I came across SeeMyResu.me and I wish I would have found it earlier."
--- John Collin</p>
+			<p>"<%= t.what %>"
+-- <%= t.who %></p>
         </div>
       </div>

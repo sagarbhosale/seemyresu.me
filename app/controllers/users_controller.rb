@@ -1,5 +1,38 @@
 class UsersController < ApplicationController
 
+  def confirmemail
+    # if params[:email].empty? || params[:code].empty?
+    #   flash[:error] = "The link is invalid. Please try signing up again."
+    # else
+    #   tmpuser = Tmpuser.where(email: params[:email], code: params[:code]).first
+    #   if(tmpuser)
+    #     user = User.create(:email => tmpuser[:email], :firstname => tmpuser[:firstname], :lastname => "", :password_hash => Digest::SHA1.hexdigest( Digest::SHA1.hexdigest( tmpuser[:code] )[0,6] ) )
+    #     user.save
+    #     tmpuser.destroy
+    #     flash[:success] = "Email confirmed. You can log in now."
+    #   else
+    #     flash[:error] = "The link is invalid. Please try signing up again."
+    #   end
+    # end
+    redirect_to "/welcome/index"
+  end
+
+  def newtmp
+    if params[:email].empty? || params[:firstname].empty?
+      flash[:error] = "All fields are mandatory"
+    else
+
+      user = User.where(email: params[:email]).first
+      if(user)
+        flash[:error] = "This exists a user with this email already"
+      else
+        newUser = Tmpuser.create(:email => params[:email], :firstname => params[:firstname], :code => Digest::SHA1.hexdigest( params[:email] + params[:firstname] + Time.now.to_s + rand(10000).to_s ) )
+        flash[:success] = "Check your mailbox to know how to get started"
+      end
+    end
+    redirect_to "/welcome/index"
+  end
+
   def authenticate
     user = User.where(email: params[:email], password_hash: Digest::SHA1.hexdigest( params[:password] ) ).first
     if(user)

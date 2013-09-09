@@ -28,6 +28,10 @@ SeemyresuMe::Application.routes.draw do
 
   get '/resume', to: "resumes#show"
 
+  post '/signup', to: "users#newtmp"
+
+  get '/confirmemail/:email/:code', to: "users#confirmemail"
+
   resources :users
 
   resources :skills
