@@ -2,8 +2,8 @@ class SkillsController < ApplicationController
   # GET /skills
   # GET /skills.json
   def index
-    @resume = Resume.find(session[:user_id])
-    @skills = @resume.skills
+    @user = User.find(session[:user_id])
+    @skills = @user.skills
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @skills }
@@ -23,15 +23,15 @@ class SkillsController < ApplicationController
 
   # GET /skills/edit
   def edit
-    @resume = Resume.find(session[:user_id])
-    @skills = @resume.skills
+    @user = User.find(session[:user_id])
+    @skills = @user.skills
     @skill = Skill.new
   end
 
   # POST /skills
   # POST /skills.json
   def create
-    params[:skill][:resume_id] = session[:user_id]
+    params[:skill][:user_id] = session[:user_id]
     @skill = Skill.new(params[:skill])
 
     respond_to do |format|

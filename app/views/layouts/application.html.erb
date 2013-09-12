@@ -3,7 +3,7 @@
 <head>
   <title>SeeMyResu.me</title>
   <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application", "rails.validations.js", 'rails.validations.custom' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -21,20 +21,19 @@ $( document ).ready(function() {
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="/">SeeMyResu.me</a>
+			<a class="brand" href="http://localhost:3000/">SeeMyResu.me</a>
 			<div class="nav-collapse collapse">
 
 <% if (session[:user_id]) %>
 <span class ="userbar pull-right">
         Hi, <%= User.find(session[:user_id]).firstname %>
-        |
         <%= link_to "logout", "/logout" %>
 </span>
 <% else %>
-        <%= form_tag("/authenticate", method: "post", :class => "navbar-form pull-right") do %>
-          <%= text_field_tag 'email', nil, class: 'span3', placeholder: 'email' %>
-          <%= password_field_tag 'password', nil, class: 'span2', placeholder: 'password' %>
-          <%= submit_tag 'Login', class: 'btn btn-primary' %>
+        <%= form_for User.new, :url => "/authenticate", method: "post", html: { class: "navbar-form pull-right" } do |f| %>
+          <%= f.text_field :email, class: 'span3', placeholder: 'email' %>
+          <%= f.password_field :password, class: 'span2', placeholder: 'password' %>
+          <%= f.submit 'Login', class: 'btn btn-primary' %>
         <% end %>
 <% end %>
     	</div>
@@ -51,7 +50,7 @@ $( document ).ready(function() {
           Edit Content
       </li>
       <li>
-        <%= link_to "Basic", "/basics" %>
+        <%= link_to "Basic", "/profile" %>
       </li>
       <li>
         <%= link_to "Skills", "/skills" %>
@@ -78,7 +77,7 @@ $( document ).ready(function() {
         <%= link_to "Sharing", "" %>
       </li>
       <li>
-        <%= link_to "Change Password", "" %>
+        <%= link_to "Change Password", "/changepassword" %>
       </li>
     </ul>
 
@@ -97,22 +96,19 @@ $( document ).ready(function() {
 
 <% if (session[:user_id]) %>
 
-  <div id="rightwing" class="pull-right span2" style="margin:0">
+  <div id="rightwing" class="pull-right span2" style="margin:0;text-align:center;">
+
+    <input type="button" class="btn btn-success" value="SeeMyResu.me" style="margin:25px 0;" onClick="window.open('http://localhost:3000/me/<%= session[:user_id] %>');" />
+
     <ul class="well sidebox">
       <li class="sideheader">
           Statistics
       </li>
       <li>
         Views
-        <%= Resume.find(session[:user_id]).views %>
+        <%= User.find(session[:user_id]).views %>
       </li>
-      <li>
-        Likes
-        <%= Resume.find(session[:user_id]).likes %>
-      </li>
-      <li>
-        Contact Requests
-      </li>
+
     </ul>
 
   </div>
@@ -121,7 +117,7 @@ $( document ).ready(function() {
       <hr>
 
       <footer style="clear:both">
-        <p>Home | About | Privacy policy | Terms of Use | Contact Us</p>
+        <p><a href="http://localhost:3000/welcome/index">Home</a> | About | Privacy policy | Terms of Use | Contact Us</p>
       </footer>
 
 </div>

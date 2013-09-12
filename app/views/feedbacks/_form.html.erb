@@ -1,0 +1,13 @@
+<%= form_for @feedback, :validate => true do |f| %>
+  <div class="field">
+    <%= f.label "Your email" %><br />
+    <%= f.text_field :who %>
+  </div>
+  <div class="field">
+    <%= f.label "Your feedback" %><br />
+    <%= f.text_area :description, :cols => 100, :rows => 10 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send", :class => "btn btn-primary" %>
+  </div>
+<% end %>

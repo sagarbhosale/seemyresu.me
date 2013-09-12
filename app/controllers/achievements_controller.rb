@@ -2,8 +2,8 @@ class AchievementsController < ApplicationController
   # GET /achievements
   # GET /achievements.json
   def index
-    @resume = Resume.find(session[:user_id])
-    @achievements = @resume.achievements
+    @user = User.find(session[:user_id])
+    @achievements = @user.achievements
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @achievements }
@@ -23,15 +23,15 @@ class AchievementsController < ApplicationController
 
   # GET /achievements/edit
   def edit
-    @resume = Resume.find(session[:user_id])
-    @achievements = @resume.achievements.sort_by { |ele| ele.year }.reverse
+    @user = User.find(session[:user_id])
+    @achievements = @user.achievements.sort_by { |ele| ele.year }.reverse
     @achievement = Achievement.new
   end
 
   # POST /achievements
   # POST /achievements.json
   def create
-    params[:achievement][:resume_id] = session[:user_id]
+    params[:achievement][:user_id] = session[:user_id]
     @achievement = Achievement.new(params[:achievement])
 
     respond_to do |format|

@@ -1,36 +1,50 @@
 SeemyresuMe::Application.routes.draw do
 
+  get '/feedback' => 'feedbacks#new'
+
+  post '/feedbacks' => 'feedbacks#create'
+
   root to: "welcome#index"
 
+  get '/me/:id' => 'users#resume'
+  
   post '/authenticate' => 'users#authenticate'
+  
+  get '/changepassword' => 'users#changepassword'
+  
+  post '/changepassword' => 'users#dochangepassword'
   
   get '/logout' => 'users#logout'
 
-  get '/basics', to: "basics#edit"
+  get '/profile' => "users#edit"
 
-  put '/basics', to: "basics#update"
+  get '/users' => "users#edit"
 
-  get '/skills', to: "skills#edit"
+  put '/users' => "users#update"
 
-  put '/skills', to: "skills#update"
+  get '/skills' => "skills#edit"
 
-  get '/achievements', to: "achievements#edit"
+  put '/skills' => "skills#update"
 
-  put '/achievements', to: "achievements#update"
+  get '/achievements' => "achievements#edit"
 
-  get '/schools', to: "schools#edit"
+  put '/achievements' => "achievements#update"
 
-  put '/schools', to: "schools#update"
+  get '/schools' => "schools#edit"
 
-  get '/experiences', to: "experiences#edit"
+  put '/schools' => "schools#update"
 
-  put '/experiences', to: "experiences#update"
+  get '/experiences' => "experiences#edit"
 
-  get '/resume', to: "resumes#show"
+  put '/experiences' => "experiences#update"
 
-  post '/signup', to: "users#newtmp"
+  get '/resume' => "resumes#show"
 
-  get '/confirmemail/:email/:code', to: "users#confirmemail"
+  post '/signup' => "users#newtmp"
+
+  get '/confirmemail/:email/:code' => "users#confirmemail", :constraints => { :email => /[^\/]+/ }
+
+  post '/confirmuser' => "users#confirmuser"
 
   resources :users
 
@@ -41,8 +55,6 @@ SeemyresuMe::Application.routes.draw do
   resources :schools
 
   resources :achievements
-
-  resources :resumes
 
   resources :faqs
   

@@ -1,5 +1,5 @@
 class Achievement < ActiveRecord::Base
-  attr_accessible :description, :resume_id, :year
+  attr_accessible :description, :user_id, :year
 
-  belongs_to :resume
+  belongs_to :user
 end

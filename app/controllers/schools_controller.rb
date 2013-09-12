@@ -2,8 +2,8 @@ class SchoolsController < ApplicationController
   # GET /schools
   # GET /schools.json
   def index
-    @resume = Resume.find(session[:user_id])
-    @schools = @resume.schools
+    @user = User.find(session[:user_id])
+    @schools = @user.schools
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @schools }
@@ -23,15 +23,15 @@ class SchoolsController < ApplicationController
 
   # GET /schools/edit
   def edit
-    @resume = Resume.find(session[:user_id])
-    @schools = @resume.schools.sort_by { |ele| ele.to }.reverse 
+    @user = User.find(session[:user_id])
+    @schools = @user.schools.sort_by { |ele| ele.to }.reverse 
     @school = School.new
   end
 
   # POST /schools
   # POST /schools.json
   def create
-    params[:school][:resume_id] = session[:user_id]
+    params[:school][:user_id] = session[:user_id]
     @school = School.new(params[:school])
 
     respond_to do |format|

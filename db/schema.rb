@@ -11,28 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907090644) do
+ActiveRecord::Schema.define(:version => 20130912082411) do
 
   create_table "achievements", :force => true do |t|
-    t.string   "resume_id"
+    t.string   "user_id"
     t.integer  "year"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "basics", :force => true do |t|
-    t.string   "resume_id"
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "email"
-    t.string   "mobile"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "experiences", :force => true do |t|
-    t.integer  "resume_id"
+    t.integer  "user_id"
     t.date     "from"
     t.date     "to"
     t.string   "name"
@@ -49,16 +39,15 @@ ActiveRecord::Schema.define(:version => 20130907090644) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "resumes", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "likes"
-    t.integer  "views"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "feedbacks", :force => true do |t|
+    t.string   "who"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "schools", :force => true do |t|
-    t.integer  "resume_id"
+    t.integer  "user_id"
     t.date     "from"
     t.date     "to"
     t.string   "name"
@@ -75,7 +64,7 @@ ActiveRecord::Schema.define(:version => 20130907090644) do
   end
 
   create_table "skills", :force => true do |t|
-    t.string   "resume_id"
+    t.string   "user_id"
     t.string   "skill_category_id"
     t.string   "name"
     t.datetime "created_at",        :null => false
@@ -104,6 +93,8 @@ ActiveRecord::Schema.define(:version => 20130907090644) do
     t.string   "password_hash"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "views"
+    t.integer  "likes"
   end
 
 end

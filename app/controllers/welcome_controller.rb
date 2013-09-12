@@ -1,6 +1,10 @@
 class WelcomeController < ApplicationController
 
 	def index
-		@testimonials = Testimonial.all
+		if (session[:user_id])
+			redirect_to "/profile"
+		else
+			@testimonials = Testimonial.all
+		end
 	end
 end

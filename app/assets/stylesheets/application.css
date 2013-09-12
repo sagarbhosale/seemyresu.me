@@ -50,3 +50,10 @@ ul.sidebox li.sideheader
 	font-weight: bold;
 	border-bottom: 1px dotted #aaa;
 }
+
+.login_validation_errors
+{
+	line-height: 40px;
+	margin-right: 5px;
+	color:red;
+}

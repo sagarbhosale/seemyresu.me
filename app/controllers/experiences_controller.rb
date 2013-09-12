@@ -2,8 +2,8 @@ class ExperiencesController < ApplicationController
   # GET /experiences
   # GET /experiences.json
   def index
-    @resume = Resume.find(session[:user_id])
-    @experiences = @resume.experiences
+    @user = User.find(session[:user_id])
+    @experiences = @user.experiences
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @experiences }
@@ -23,15 +23,15 @@ class ExperiencesController < ApplicationController
 
   # GET /experiences/edit
   def edit
-    @resume = Resume.find(session[:user_id])
-    @experiences = @resume.experiences.sort_by { |ele| ele.to }.reverse 
+    @user = User.find(session[:user_id])
+    @experiences = @user.experiences.sort_by { |ele| ele.to }.reverse 
     @experience = Experience.new
   end
 
   # POST /experiences
   # POST /experiences.json
   def create
-    params[:experience][:resume_id] = session[:user_id]
+    params[:experience][:user_id] = session[:user_id]
     @experience = Experience.new(params[:experience])
 
     respond_to do |format|
