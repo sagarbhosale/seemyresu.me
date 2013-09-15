@@ -1,5 +1,21 @@
 SeemyresuMe::Application.routes.draw do
 
+  namespace :api do
+    namespace :v1 do
+      get "/person/:name" => "peoples#index"
+      get "/skill" => "skills#index"
+      get "/testimonial" => "testimonials#index"
+    end
+  end
+
+  get '/template' => "resume_templates#index"
+
+  get '/changetemplate/:id' => "users#changetemplate"
+
+  get '/sharing' => "users#sharing"
+
+  post '/changesharing' => "users#changesharing"
+
   get '/feedback' => 'feedbacks#new'
 
   post '/feedbacks' => 'feedbacks#create'

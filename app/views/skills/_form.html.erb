@@ -1,25 +1,17 @@
 <%= form_for(@skill) do |f| %>
-  <% if @skill.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@skill.errors.count, "error") %> prohibited this skill from being saved:</h2>
-
-      <ul>
-      <% @skill.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
     <%= f.label :skill_category_id %><br />
-    <%= f.text_field :skill_category_id %>
+    <%= f.text_field :skill_category_id %><br/>
+    <span class="fieldtip">category can be programming languages, tool, IDE, operation system, web api, etc.</span>
   </div>
+
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name %><br/>
+    <span class="fieldtip">skill can be C, PHP, Ruby on Rails, Eclipse, Linux, etc.</span>
   </div>
+
   <div class="actions">
-    <%= f.submit "Add skill", class: "btn btn-success" %>
+    <%= f.submit "Add skill", class: "btn btn-primary" %>
   </div>
 <% end %>

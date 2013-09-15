@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SeeMyResu.me</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application", "rails.validations.js", 'rails.validations.custom' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+
+<% flash.each do |key, msg| %>
+  noty({text: '<%= msg %>', type: '<%= key %>'});
+<% end %>
+});
+</script>
+
+
+<% if (session[:user_id]) %>
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<div class="nav-collapse collapse">
+
+<span class ="userbar pull-right">
+        Hi, <%= User.find(session[:user_id]).firstname %>
+        |
+        <%=
+        if @user.id != session[:user_id]
+          link_to "Like", "#"
+          puts "|"
+          link_to "Request call back", "#"
+          puts "|"
+        end
+        %>
+        <%= link_to "logout", "/logout" %>
+</span>
+    	</div>
+		</div>
+	</div>
+</div>
+<% end %>
+
+<div class="container content" style="margin-top:40px;">
+    <%= yield %>
+</div>
+
+
+</body>
+</html>

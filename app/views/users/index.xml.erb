@@ -1,0 +1,9 @@
+xml.instruct!
+xml.users do
+  @users.each do |user|
+    xml.user do
+      xml.firstname user.firstname
+      xml.lastname user.lastname
+    end
+  end
+end

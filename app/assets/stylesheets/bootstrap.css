@@ -6170,4 +6170,10 @@ footer
 {
   text-align: center;
   color:#999;
+  clear:both;
+}
+
+.thebox
+{
+  min-height: 500px;
 }

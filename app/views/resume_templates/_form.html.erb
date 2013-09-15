@@ -1,0 +1,21 @@
+<%= form_for(@resume_template) do |f| %>
+  <% if @resume_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resume_template.errors.count, "error") %> prohibited this resume_template from being saved:</h2>
+
+      <ul>
+      <% @resume_template.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

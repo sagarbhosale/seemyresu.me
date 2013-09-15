@@ -47,6 +47,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.1)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
     hike (1.2.3)
     i18n (0.6.5)
     journey (1.0.4)
@@ -69,6 +71,8 @@ GEM
     noty-rails (2.1.0.1)
     orm_adapter (0.4.0)
     pg (0.16.0)
+    pjax_rails (0.3.4)
+      jquery-rails
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -139,10 +143,12 @@ DEPENDENCIES
   client_side_validations
   coffee-rails (~> 3.2.1)
   devise
+  factory_girl
   jquery-rails
   less-rails
   noty-rails
   pg
+  pjax_rails
   rails (= 3.2.7)
   rails_12factor
   sass-rails (~> 3.2.3)

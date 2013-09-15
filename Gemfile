@@ -13,7 +13,7 @@ group :development, :test do
 end
 
 gem 'devise'
-
+gem 'factory_girl'
 gem 'actionmailer'
 
 gem "therubyracer"
@@ -21,6 +21,8 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 
 gem 'rails_12factor', group: :production
+
+gem 'pjax_rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

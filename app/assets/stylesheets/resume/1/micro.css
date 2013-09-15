@@ -1,0 +1,83 @@
+/*Tommaso Romito (job.memero.org)
+---------------------------------------------------------*/
+
+/*Typo
+---------------------------------------------------------*/
+
+h1 {font-size:3.3em;width:62%;float:left;text-shadow:0px 0px 1px #bbb;margin:44px 0;}
+h2 {font-size:1.5em;margin:1em 0 0.8em 0;border-bottom:2px solid #efefef;text-shadow:0px 0px 1px #ccc;background:#fafafa;}
+h3 {}
+p  {}
+a:link, a:visited, a:focus {text-decoration:none;outline:none;color:#448544;}
+a:hover, a:active {border-bottom:1px dotted #1d1d1d;color:#000;}
+
+/*Structure
+---------------------------------------------------------*/
+body {
+	border-top:5px solid #555;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	color:#262626;
+	line-height: 24px;
+}
+
+.hresume {
+	width:800px;
+	margin:30px auto;
+}
+header {height:7em;padding-top:13px;}
+
+section {clear:both;}
+	section .date_duration {float:left;margin-left:-43%;font-style: italic;font-size:0.85em;line-height:1.6em;text-decoration:none;color:#999;}
+	section p {}
+	section .skill {cursor:help;}
+	section small {font-size:75%;float:right;margin-top:-20px;color:#999;}
+	section .vevent {padding:0.62em 0;}
+
+figure {width:38%;float:right;text-align:right;}
+	.geo {cursor:help;}
+
+ul li {margin-left:30%;padding:16px 0;}
+
+footer {position:fixed;bottom:-400px;left:0;z-index:2;width:100%;background:#1d1d1d;color:#efefef;padding:1em;border-top:2px solid #888;}
+	footer div {position:fixed;top:2.3em;left:1em;color:#1d1d1d;font-size:3em;cursor:help;}
+
+footer:hover {bottom:0px;}
+	footer p {display:inline;margin:0 1em;}
+
+/*Microformts classes
+---------------------------------------------------------*/
+
+
+.hresume {}
+
+.hresume abbr{}
+
+.hresume address{}
+
+.hresume hr{}
+
+.hresume .contact .fn{}
+
+.hresume h2{}
+
+.hresume .education, .hresume .accreditation{}
+
+.hresume .experience{}
+
+.hresume .summary, .hresume .tags{}
+
+.hresume .education .htitle, .hresume .experience .htitle{}
+
+.hresume .htitle .include{}
+
+.hresume .education .date_duration, .hresume .experience .date_duration{}
+
+.hresume .education .summary{}
+
+.hresume .tags ul{margin-left:30%;}
+
+.hresume .tags ul li{display:inline;margin-left:0px;}
+
+
+
+

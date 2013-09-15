@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130912082411) do
+ActiveRecord::Schema.define(:version => 20130913100938) do
 
   create_table "achievements", :force => true do |t|
     t.string   "user_id"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(:version => 20130912082411) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "basics", :force => true do |t|
+    t.string   "resume_id"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "mobile"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "experiences", :force => true do |t|
@@ -44,6 +54,20 @@ ActiveRecord::Schema.define(:version => 20130912082411) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "resume_templates", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "resumes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "likes"
+    t.integer  "views"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "schools", :force => true do |t|
@@ -91,10 +115,13 @@ ActiveRecord::Schema.define(:version => 20130912082411) do
     t.string   "lastname"
     t.string   "email"
     t.string   "password_hash"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "views"
     t.integer  "likes"
+    t.string   "mobile"
+    t.integer  "resume_template"
+    t.string   "sharing"
   end
 
 end

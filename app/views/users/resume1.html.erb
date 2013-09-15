@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+	<title><%= @user.firstname + ' ' + @user.lastname %></title>
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<%= stylesheet_link_tag "resume/1/reset.css" %>
+	<%= stylesheet_link_tag "resume/1/micro.css" %>
+	<%= javascript_include_tag "resume/1/modernizr-1.6.min.js" %>
+
+</head>
+<body>
+
+
+<article class="hresume">
+
+	<header class="contact vcard" itemscope="" itemtype="http://data-vocabulary.org/Person">
+<!-- include start -->	<h1><span class="fn n" id="tommaso-romito" itemprop="name">
+				<span class="given-name"><%= @user.firstname %></span> <span class="family-name"><%= @user.lastname %></span></span>
+			</h1>
+		<figure>
+			<a class="email" itemprop="email" rel="me" href="mailto:{{resume.email}}"><%= @user.email %></a><br>
+			<a class="url" itemprop="url" rel="me" href="{{resume.website}}"></a><br>
+
+			<span class="tel">
+				<span class="value" itemprop="tel"><%= @user.mobile %></span> (<span class="type">cell</span>)
+			</span><br>
+
+			<address class="adr" itemprop="address" itemscope="" itemtype="http://data-vocabulary.org/Address">
+				<a class="geo" title="open my work location in google maps" target="_blank" href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=52.521926+13.326017&sll=52.521926,-13.326017&sspn=8.761375,23.181152&ie=UTF8&t=h&z=16">
+					<abbr class="latitude" title="52.521926"></abbr>
+					<abbr class="longitude" title="13.326017"></abbr>
+
+					<span class="street-address" itemprop="street-address"></span>
+					<span class="locality region" itemprop="locality region"></span>
+					<span class="postal-code" itemprop="postal-code"></span>
+					<span class="country-name" itemprop="country-name"></span>
+				</a>				
+			</address>		
+		</figure>
+	</header><!-- vcard -->
+
+	<section class="tags"><h2>Skills</h2>
+<% @user.skills.each do |skill| %>
+		<ul>
+			<li>
+				<b><%= skill.name %> </b> - <%= skill.skill_category_id %>
+			</li>
+		</ul>		
+<% end %>
+	</section><!-- tags -->	
+
+	<section class="vcalendar"><h2>Professional Experience</h2>
+			<ul>
+<% @user.experiences.each do |exp| %>
+				<li class="education vevent vcard">
+					<div class="htitle">
+						<div class="date_duration">
+							<time class="dtstart" datetime="" title=""><%= exp.from.month.to_s + ' ' + exp.from.year.to_s %> - </time>
+							<time class="dtend" datetime="" title="">
+								<span><%= exp.to.month.to_s + ' ' + exp.to.year.to_s %></span>
+							</time>
+						</div>
+						<h3 class="summary"><%= exp.desc %></h3><small></small>
+						<p><span class="org url"><a href="<%= exp.website %>"><%= exp.name %></a></span></p>
+					</div>					
+				</li>				
+<% end %>
+			</ul><!-- experience vevent vcard -->			
+	</section><!-- vcalendar -->
+
+	<section class="vcalendar"><h2>Education</h2>
+			<ul>
+<% @user.schools.each do |school| %>
+				<li class="education vevent vcard">
+					<div class="htitle">
+						<div class="date_duration">
+							<time class="dtstart" datetime="" title=""><%= school.from.month.to_s + ' ' + school.from.year.to_s %> - </time>
+							<time class="dtend" datetime="" title="">
+								<span><%= school.to.month.to_s + ' ' + school.to.year.to_s %></span>
+							</time>
+						</div>
+						<h3 class="summary"><%= school.desc %></h3><small></small>
+						<p><span class="org url"><a href="<%= school.website %>"><%= school.name %></a></span></p>
+					</div>					
+				</li>				
+<% end %>
+			</ul><!-- experience vevent vcard -->			
+	</section><!-- vcalendar -->
+
+
+	<section class="vcalendar"><h2>Achievements</h2>
+			<ul>
+<% @user.achievements.each do |a| %>
+				<li class="achievements vevent vcard">
+					<div class="htitle">
+						<div class="date_duration"><time class="dtend"><%= a.year %></time>
+						</div>
+						<p><span><%= a.description %></span></p>
+					</div>
+				</li>
+<% end %>
+			</ul><!-- achievements vevent vcard -->			
+	</section><!-- vcalendar -->
+
+</article><!-- hresume -->
+
+
+
+
+<!--<footer>-->
+<!--<div title="-->
+<!--..::Web Deign by memero.org::.. These are the technologies that I`ve used for build this R&eacute;sum&eacute; :-->
+<!--Html5, Microformats, Microdata, Dublin Core Metadata, Css3.-->
+<!--"><p><a href="http://www.w3.org/html/logo/">-->
+<!--<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">-->
+<!--</a></p></div>-->
+<!--	<p>Html5</p>-->
+<!--	<p>Microformats</p>-->
+<!--	<p>Microdata</p>-->
+<!--	<p>Dublin Core Metadata</p>-->
+<!--	<p>Css3</p>-->
+<!--</footer>-->
+
+<!-- ________________________________________________________________________________________________ -->
+</body>
+</html>

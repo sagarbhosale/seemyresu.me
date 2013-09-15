@@ -1,0 +1,17 @@
+<p>
+  Selected template: <%= @selected %>
+</p>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @resume_templates.each do |resume_template| %>
+  <tr>
+    <td><%= resume_template.name %></td>
+    <td><%= link_to 'Select', "/changetemplate/" + resume_template.id.to_s %></td>
+  </tr>
+<% end %>
+</table>

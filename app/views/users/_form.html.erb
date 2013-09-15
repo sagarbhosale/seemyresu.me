@@ -1,27 +1,23 @@
 <%= form_for @user, :validate => true do |f| %>
-  <div class="actions">
-    <%= f.submit "Update", :class => "btn btn-success pull-right" %>
-  </div>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
     <%= f.label :firstname %><br />
     <%= f.text_field :firstname %><br/>
     <span class="fieldtip">use only alphabets</span>
   </div>
+
   <div class="field">
     <%= f.label :lastname %><br />
     <%= f.text_field :lastname %><br/>
     <span class="fieldtip">(optional) again, use only alphabets</span>
+  </div>
+
+  <div class="field">
+    <%= f.label :mobile %><br />
+    <%= f.text_field :mobile %><br/>
+    <span class="fieldtip">(optional) always keep your mobile number updated</span>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update", :class => "btn btn-primary" %>
   </div>
 <% end %>

@@ -12,6 +12,7 @@ class FeedbacksController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @feedback }
+      format.xml { render xml: Feedback.all }
     end
   end
 

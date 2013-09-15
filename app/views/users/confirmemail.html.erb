@@ -1,4 +1,31 @@
-<%= form_tag action: "confirmuser" do %>
+<script>
+$(document).ready(function () {
+    $("#password").focus();
+});
+function check_passwords()
+{
+  if($("#password").val() == "")
+  {
+    $("#validation_errors").text("Please enter a password");
+    $("#password").focus();
+    return false;
+  }
+  else if($("#confirmpassword").val() == "")
+  {
+    $("#validation_errors").text("Please confirm your password");
+    $("#confirmpassword").focus();
+    return false;
+  }
+  else if($("#password").val() != $("#confirmpassword").val())
+  {
+    $("#validation_errors").text("Passwords should match");
+    return false;
+  }
+  return true;
+}
+</script>
+<%= form_tag "/confirmuser", :onsubmit => "return check_passwords();", :style => "text-align:center;" do %>
+  <br/>
   <div class="field">
     Hi,<br /><%= @tmpuser[:firstname] %>
     <%= hidden_field_tag 'firstname', @tmpuser[:firstname] %>
@@ -11,14 +38,17 @@
     <%= hidden_field_tag 'email', @tmpuser[:email] %>
   </div>
   <div class="field">
-    And set a new password for your account<br />
+    Set a new password for your account<br />
     <%= password_field_tag :password %>
   </div>
   <div class="field">
     Confirm password<br />
     <%= password_field_tag :confirmpassword %>
   </div>
+  <div class="error">
+    <span id="validation_errors" class="error_field"></span>
+  </div>
   <div class="actions">
-    <%= submit_tag "Submit and Login", class: "btn btn-success" %>
+    <%= submit_tag "Submit and Login", class: "btn btn-primary" %>
   </div>
 <% end %>

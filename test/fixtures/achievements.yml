@@ -1,11 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  resume_id: MyString
-  year: 1
-  description: MyString
+  user_id: 1
+  year: 2001
+  description: Won that award there
 
 two:
-  resume_id: MyString
-  year: 1
-  description: MyString
+  user_id: 1
+  year: 2011
+  description: I just like this year.
+
+three:
+  user_id: 2
+  year: 2004
+  description: I am awesome
+
+four:
+  user_id: 3
+  year: 2007
+  description: I just realised that I am a good guy
+  

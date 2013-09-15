@@ -4,11 +4,11 @@ You are one step closer to your awesome, yet free, personal website.
 
 This mail is a way to verify the users that you will be interacting with when you join the network.
 To proceed click on the link:
-<%= link_to "Verify my email", "http://localhost:3000/" + "confirmemail/" + @tmpuser.email + "/" + @tmpuser.code %><br/><br/>
+<%= link_to "Verify my email", Rails.application.appURL + "/confirmemail/" + @tmpuser.email + "/" + @tmpuser.code %><br/><br/>
 
 Thank you for your cooperation.
 
 Regards,
-SeeMyResu.me Team
+<%= Rails.application.appName %> Team
 
 <small>If you did not sign up for this, please report to admin@seemyresu.me</small>

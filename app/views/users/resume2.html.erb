@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" ng-app ng-controller="resumeController">
+<head>
+	<title><%= @user.firstname + ' ' + @user.lastname %></title>
+	
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<%= stylesheet_link_tag "resume/2/reset.css" %>
+	<%= stylesheet_link_tag "resume/2/style.css" %>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>	
+	<%= javascript_include_tag "resume/2/resumeController.js" %>
+
+</head>
+<body>
+
+	<div class="block">
+		<div class="block_title">#About</div>
+		<div class="block_body">
+			<ul>
+				<li><span class="attr_key">Name</span><span class="attr_value"><%= @user.firstname %> <%= @user.lastname %></span></li>
+				<li><span class="attr_key">Email</span><span class="attr_value"><%= @user.email %></span></li>
+				<li><span class="attr_key">Contact</span><span class="attr_value"><%= @user.mobile %></span></li>
+			<ul>
+		</div>
+	</div>
+
+	<div class="block">
+		<div class="block_title">#Skills</div>
+		<div class="block_body">
+			<ul>
+				<% @user.skills.each do |skill| %>
+					<li>
+						<span class="attr_key"><%= skill.skill_category_id %></span>
+						<span class="attr_value"><%= skill.name %></span>
+					</li>
+				<% end %>
+			<ul>
+		</div>
+	</div>
+
+<% @user.experiences.each do |exp| %>
+	<div class="block">
+		<div class="block_title">.Experience</div>
+		<div class="block_body">
+			<ul>
+				<li>
+					<span class="attr_key">Designation</span><span class="attr_value"><%= exp.desc %></span>
+				</li>
+				<li>
+					<span class="attr_key">Duration</span><span class="attr_value">
+					<%= exp.from.month.to_s + ' ' + exp.from.year.to_s %> -
+								<span><%= exp.to.month.to_s + ' ' + exp.to.year.to_s %></span></span></li>
+				<li>
+					<span class="attr_key">Organization</span><span class="attr_value"><a href="<%= exp.website %>"><%= exp.website %></a></span>
+				</li>
+			<ul>
+		</div>
+	</div>
+<% end %>
+
+<% @user.schools.each do |school| %>
+	<div class="block">
+		<div class="block_title">.School</div>
+		<div class="block_body">
+			<ul>
+				<li>
+					<span class="attr_key">Designation</span><span class="attr_value"><%= school.desc %></span>
+				</li>
+				<li>
+					<span class="attr_key">Duration</span><span class="attr_value">
+					<%= school.from.month.to_s + ' ' + school.from.year.to_s %> -
+								<span><%= school.to.month.to_s + ' ' + school.to.year.to_s %></span></span></li>
+				<li>
+					<span class="attr_key">Organization</span><span class="attr_value"><a href="<%= school.website %>"><%= school.website %></a></span>
+				</li>
+			<ul>
+		</div>
+	</div>
+<% end %>
+
+<% @user.achievements.each do |a| %>
+	<div class="block">
+		<div class="block_title">#Achievement</div>
+		<div class="block_body">
+			<ul>
+				<li>
+					<span class="attr_key"><%= a.year %></span><span class="attr_value"><%= a.description %></span>
+				</li>
+			<ul>
+		</div>
+	</div>
+<% end %>
+
+</code>
+
+</body>
+</html>

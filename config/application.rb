@@ -6,9 +6,9 @@ require 'digest/sha1'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  # Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
-  Bundler.require(:default, :assets, Rails.env)
+  # Bundler.require(:default, :assets, Rails.env)
 end
 
 module SeemyresuMe
@@ -19,6 +19,14 @@ module SeemyresuMe
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
+
+    def appURL
+        "http://10.0.0.10:3000/"
+    end
+
+    def appName
+        "SeeMyResu.me"
+    end
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.

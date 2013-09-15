@@ -22,7 +22,7 @@
 			<p># Stay ahead</p>
         </div>
 
-      <% t = @testimonials.first
+      <% t = Testimonial.find(rand(Testimonial.count) + 1)
           if (t) %>
         <div class="span7">
             	<h3>
@@ -35,6 +35,6 @@
       <% end %>
 
         <div class="span7">
-          <a href="/feedback"><h3 class="btn btn-success">Give Feedback</h3></a>
+          <a href="/feedback"><h3 class="btn btn-primary">Give Feedback</h3></a>
         </div>
       </div>

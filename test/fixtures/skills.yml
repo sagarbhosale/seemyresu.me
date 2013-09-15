@@ -1,11 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  resume_id: MyString
-  skill_category_id: MyString
-  name: MyString
+  user_id: 1
+  skill_category_id: 1
+  name: C
 
 two:
-  resume_id: MyString
-  skill_category_id: MyString
-  name: MyString
+  user_id: 1
+  skill_category_id: 1
+  name: C++
+
+three:
+  user_id: 1
+  skill_category_id: 2
+  name: Linux
+
+four:
+  user_id: 2
+  skill_category_id: 2
+  name: Windows
+
+five:
+  user_id: 2
+  skill_category_id: 2
+  name: Linux
+
+six:
+  user_id: 3
+  skill_category_id: 1
+  name: PHP

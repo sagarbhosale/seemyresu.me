@@ -1,0 +1,21 @@
+<h4>
+  Set your sharing preference
+</h4>
+<p>
+  Chose who can see your resume by visiting your resume URL
+</p>
+<br/>
+<%= form_tag "/changesharing", action: "post" do %>
+  <% [["Open", "Anyone with the URL"], ["Restricted", "Only registered users"], ["Private", "Only you"]].each do |i| %>  
+    <div class="field">
+      <label>
+        <%=
+          radio_button("sharing", "type", i[0], {checked: @user.sharing == i[0] })
+        %> <%= i[0] %> - <span class="fieldtip"><%= i[1] %></span>
+      </label>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= submit_tag "Update", :class => "btn btn-primary" %>
+  </div>
+<% end %>

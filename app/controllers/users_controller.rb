@@ -2,7 +2,55 @@ class UsersController < ApplicationController
 
   def resume
     @user = User.find(params[:id])
-    render file: "users/resume", :layout => false
+    if( @user )
+
+      if(@user.sharing == "Restricted" && session[:user_id] == nil)
+        flash[:error] = "You can view this resume only if you are logged in"
+        redirect_to "/welcome/index"
+        return
+      end
+
+      if(@user.sharing == "Private" && session[:user_id] != @user.id)
+        flash[:error] = "You can view this resume only if you are logged in"
+        redirect_to "/welcome/index"
+        return
+      end
+
+      if(session[:user_id] != @user.id)
+        @user.views = @user.views + 1
+        @user.save
+      end
+      render file: "users/resume" + @user.resume_template.to_s, :layout => false
+    else
+      flash[:error] = "invalid URL"
+      redirect_to "/welcome/index"
+    end
+  end
+
+  def changesharing
+    @user = User.find(session[:user_id])
+    if( @user )
+      @user.sharing = params[:sharing][:type]
+      if( @user.save )
+        flash[:success] = "Updated"
+      end
+    end
+    redirect_to "/sharing"
+  end
+
+  def sharing
+    @user = User.find(session[:user_id])
+  end
+
+  def changetemplate
+    @user = User.find(session[:user_id])
+    if( @user )
+      @user.resume_template = params[:id]
+      if( @user.save )
+        flash[:success] = "Updated"
+      end
+    end
+    redirect_to "/template"
   end
 
   def changepassword
@@ -43,14 +91,15 @@ class UsersController < ApplicationController
 
       @tmpuser = Tmpuser.where(email: params[:email], code: params[:code]).first
       raise "User not found" if (nil == @tmpuser)
-      user = User.create(:email => @tmpuser[:email], :firstname => @tmpuser[:firstname], :password_hash => Digest::SHA1.hexdigest( params[:password] ), :views => 0)
-      raise "User couldn't be created. Contact the admin." if (nil == user)
+      user = User.new(:email => @tmpuser[:email], :firstname => @tmpuser[:firstname], :password_hash => Digest::SHA1.hexdigest( params[:password] ), :views => 0, :resume_template => 1, :sharing => "Open")
+      raise "User couldn't be created. Contact the admin." if (!user.save)
       @tmpuser.destroy
       session[:user_id] = user.id
       flash[:success] = "Welcome :)"
       redirect_to "/users"
     rescue
       flash[:error] = "Something went wrong."
+      redirect_to "/welcome/index"
     end
   end
 
@@ -85,13 +134,28 @@ class UsersController < ApplicationController
   end
 
   def authenticate
-    user = User.where(email: params[:user][:email], password_hash: Digest::SHA1.hexdigest( params[:user][:password] ) ).first
-    if(user)
-      session[:user_id] = user.id
-      redirect_to "/users"
-    else
-      redirect_to "/welcome/index", :flash => { :error => "Invalid username or password" }
-    end
+      user = User.where(email: params[:user][:email], password_hash: Digest::SHA1.hexdigest( params[:user][:password] ))
+
+      user = user.first
+      if(user)
+        session[:user_id] = user.id
+
+        if(request.xhr?)
+          render :text => "OK", :content_type => Mime::TEXT
+          return
+        else
+          redirect_to "/users"
+        return
+        end
+      else
+        if(request.xhr?)
+          render :text => "NOTOK", :content_type => Mime::TEXT
+          return
+      else
+          redirect_to "/welcome/index", :flash => { :error => "Invalid username or password" }
+        return
+        end
+      end
   end
 
   def logout
@@ -102,7 +166,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @user = Resume.find(session[:user_id])
+    @user = User.find(session[:user_id])
     @experiences = @resume.experiences
     respond_to do |format|
       format.html # index.html.erb

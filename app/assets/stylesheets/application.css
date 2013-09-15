@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_directory .
  */
 
 a:hover, a:focus {
@@ -51,9 +51,25 @@ ul.sidebox li.sideheader
 	border-bottom: 1px dotted #aaa;
 }
 
+ul.sidebox li
+{
+	margin:15px 0;
+}
+
 .login_validation_errors
 {
 	line-height: 40px;
 	margin-right: 5px;
 	color:red;
+}
+
+.error_field
+{
+	color: red;
+}
+
+.current
+{
+	font-weight: bold;
+	letter-spacing: 1px;
 }

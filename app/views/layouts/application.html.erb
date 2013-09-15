@@ -21,17 +21,51 @@ $( document ).ready(function() {
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="http://localhost:3000/">SeeMyResu.me</a>
+			<a class="brand" href="<%= Rails.application.appURL %>"><%= Rails.application.appName %></a>
 			<div class="nav-collapse collapse">
 
 <% if (session[:user_id]) %>
 <span class ="userbar pull-right">
         Hi, <%= User.find(session[:user_id]).firstname %>
+        |
         <%= link_to "logout", "/logout" %>
 </span>
 <% else %>
-        <%= form_for User.new, :url => "/authenticate", method: "post", html: { class: "navbar-form pull-right" } do |f| %>
-          <%= f.text_field :email, class: 'span3', placeholder: 'email' %>
+<script>
+$(document).ready(function () {
+    $("#user_email").focus();
+});
+function check_input()
+{
+  if($("#user_email").val() == "")
+  {
+    $("#validation_errors").text("Please enter an email address");
+    $("#user_email").focus();
+    return false;
+  }
+  else if($("#user_password").val() == "")
+  {
+    $("#validation_errors").text("Please enter your password");
+    $("#user_password").focus();
+    return false;
+  }
+  $.post('/authenticate', $("#new_user").serialize())
+    .success(function (data) {
+      if("OK" == data)
+      {
+        window.location = window.location;        
+      }
+      else
+      {
+        noty({text: 'Invalid username or password', type: 'error'});
+      }
+    });
+  return false;
+}
+</script>
+
+        <%= form_for User.new, :url => "/authenticate", method: "post", html: { class: "navbar-form pull-right", :onsubmit => "return check_input();" } do |f| %>
+          <%= f.email_field :email, class: 'span3', placeholder: 'email' %>
           <%= f.password_field :password, class: 'span2', placeholder: 'password' %>
           <%= f.submit 'Login', class: 'btn btn-primary' %>
         <% end %>
@@ -50,19 +84,19 @@ $( document ).ready(function() {
           Edit Content
       </li>
       <li>
-        <%= link_to "Basic", "/profile" %>
+        <%= link_to "Basic", "/profile", class: "#{'current' if current_page?('/profile')}" %>
       </li>
       <li>
-        <%= link_to "Skills", "/skills" %>
+        <%= link_to "Skills", "/skills", class: "#{'current' if current_page?('/skills')}" %>
       </li>
       <li>
-        <%= link_to "Achievements", "/achievements" %>
+        <%= link_to "Achievements", "/achievements", class: "#{'current' if current_page?('/achievements')}" %>
       </li>
       <li>
-        <%= link_to "Academics", "/schools" %>
+        <%= link_to "Academics", "/schools", class: "#{'current' if current_page?('/schools')}" %>
       </li>
       <li>
-        <%= link_to "Experience", "/experiences" %>
+        <%= link_to "Experience", "/experiences", class: "#{'current' if current_page?('/experiences')}" %>
       </li>
     </ul>
 
@@ -71,13 +105,13 @@ $( document ).ready(function() {
           Settings
       </li>
       <li>
-        <%= link_to "Template", "" %>
+        <%= link_to "Template", "/template", class: "#{'current' if current_page?('/template')}" %>
       </li>
       <li>
-        <%= link_to "Sharing", "" %>
+        <%= link_to "Sharing", "/sharing", class: "#{'current' if current_page?('/sharing')}" %>
       </li>
       <li>
-        <%= link_to "Change Password", "/changepassword" %>
+        <%= link_to "Change Password", "/changepassword", class: "#{'current' if current_page?('/changepassword')}" %>
       </li>
     </ul>
 
@@ -86,27 +120,37 @@ $( document ).ready(function() {
 
 <% if (session[:user_id]) %>
 
-  <div id="centerstage" class="pull-left span8" style="padding:20px;margin:0">
+  <div id="centerstage" class="pull-left span8 thebox" style="padding:20px;margin:0" data-pjax-container>
     <%= yield %>
   </div>
 
 <% else %>
+
+  <div data-pjax-container class="thebox">
     <%= yield %>
+  </div>
+
 <% end %>
 
 <% if (session[:user_id]) %>
 
   <div id="rightwing" class="pull-right span2" style="margin:0;text-align:center;">
 
-    <input type="button" class="btn btn-success" value="SeeMyResu.me" style="margin:25px 0;" onClick="window.open('http://localhost:3000/me/<%= session[:user_id] %>');" />
+    <input type="button" class="btn btn-success" value="SeeMyResu.me" style="margin:25px 0;" onClick="window.open('<%= Rails.application.appURL + "/me/" + session[:user_id].to_s %>');" />
 
     <ul class="well sidebox">
       <li class="sideheader">
           Statistics
       </li>
+
       <li>
-        Views
-        <%= User.find(session[:user_id]).views %>
+        Views<br/>
+        <b><%= User.find(session[:user_id]).views %></b>
+      </li>
+
+      <li>
+        Sharing<br/>
+        <b><%= User.find(session[:user_id]).sharing %></b>
       </li>
 
     </ul>
@@ -117,7 +161,7 @@ $( document ).ready(function() {
       <hr>
 
       <footer style="clear:both">
-        <p><a href="http://localhost:3000/welcome/index">Home</a> | About | Privacy policy | Terms of Use | Contact Us</p>
+        <p><a href="<%= Rails.application.appURL %>/welcome/index">Home</a> | About | Privacy policy | Terms of Use | Contact Us</p>
       </footer>
 
 </div>
