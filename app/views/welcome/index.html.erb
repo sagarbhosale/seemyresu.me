@@ -22,7 +22,7 @@
 			<p># Stay ahead</p>
         </div>
 
-      <% t = Testimonial.find(rand(Testimonial.count) + 1)
+      <% t = Testimonial.last
           if (t) %>
         <div class="span7">
             	<h3>

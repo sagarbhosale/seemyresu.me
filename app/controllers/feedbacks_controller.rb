@@ -11,8 +11,6 @@ class FeedbacksController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @feedback }
-      format.xml { render xml: Feedback.all }
     end
   end
 
@@ -23,25 +21,10 @@ class FeedbacksController < ApplicationController
     if @feedback.save
       flash[:success] = "Feedback was successfully submitted. Thank you. :)"
       AppMailer.feedback(@feedback).deliver
+      redirect_to "/"
     else
       flash[:error] = "Please try again."
-    end
-    redirect_to "/feedback"
-  end
-
-  # PUT /feedbacks/1
-  # PUT /feedbacks/1.json
-  def update
-    @feedback = Feedback.find(params[:id])
-
-    respond_to do |format|
-      if @feedback.update_attributes(params[:feedback])
-        format.html { redirect_to @feedback, notice: 'Feedback was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @feedback.errors, status: :unprocessable_entity }
-      end
+      redirect_to "/feedback"
     end
   end
 

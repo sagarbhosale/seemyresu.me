@@ -73,6 +73,7 @@ module SeemyresuMe
 
     config.assets.compile = true
 
+    config.exceptions_app = self.routes
 
   end
 end

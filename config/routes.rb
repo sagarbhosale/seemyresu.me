@@ -34,9 +34,9 @@ SeemyresuMe::Application.routes.draw do
 
   get '/profile' => "users#edit"
 
-  get '/users' => "users#edit"
+  # get '/users' => "users#edit"
 
-  put '/users' => "users#update"
+  # put '/users' => "users#update"
 
   get '/skills' => "skills#edit"
 
@@ -53,8 +53,6 @@ SeemyresuMe::Application.routes.draw do
   get '/experiences' => "experiences#edit"
 
   put '/experiences' => "experiences#update"
-
-  get '/resume' => "resumes#show"
 
   post '/signup' => "users#newtmp"
 

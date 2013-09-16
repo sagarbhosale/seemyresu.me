@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  resume_id: 1
-  from: 2013-09-04
+  user_id: 1
+  from: 2014-09-04
   to: 2013-09-04
-  name: MyString
-  website: MyString
-  desc: MyString
+  name: PSL
+  website: http://persistentsys.com/
+  desc: Software Engineer
 
 two:
-  resume_id: 1
-  from: 2013-09-04
+  user_id: 2
+  from: 2011-09-04
   to: 2013-09-04
-  name: MyString
-  website: MyString
-  desc: MyString
+  name: Facebook
+  website: http://facebook.com/
+  desc: Developer

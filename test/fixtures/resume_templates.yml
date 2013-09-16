@@ -1,19 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+1:
+  id: 1123
   name: Classic
 
-two:
+2:
+  id: 1124
   name: CSS
 
-one:
+3:
+  id: 1125
   name: Raw
 
-two:
+4:
+  id: 1126
   name: Plain
 
-one:
+5:
+  id: 1127
   name: Colorful
 
-two:
+6:
+  id: 1128
   name: High Contrast

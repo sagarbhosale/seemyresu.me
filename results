@@ -1,0 +1,893 @@
+Run options: 
+
+# Running tests:
+
+............
+
+Finished tests in 0.153474s, 78.1891 tests/s, 78.1891 assertions/s.
+
+12 tests, 12 assertions, 0 failures, 0 errors, 0 skips
+Run options: 
+
+# Running tests:
+
+E.EE.EEEEEEEEEE.EE.EE.......FEEE.EEEEEEEEEEEEEEEEE.EE.EEE.EE.EEFEEE.EE
+
+Finished tests in 1.643361s, 42.5956 tests/s, 15.8212 assertions/s.
+
+  1) Error:
+test_should_create_achievement(AchievementsControllerTest):
+NoMethodError: undefined method `resume_id' for #<Achievement:0x007f9d5e8a84c0>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/achievements_controller_test.rb:21:in `block (2 levels) in <class:AchievementsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/achievements_controller_test.rb:20:in `block in <class:AchievementsControllerTest>'
+
+  2) Error:
+test_should_get_edit(AchievementsControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/achievements_controller.rb:26:in `edit'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__1357535192544470707__process_action__4456323126642966560__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/achievements_controller_test.rb:33:in `block in <class:AchievementsControllerTest>'
+
+  3) Error:
+test_should_get_index(AchievementsControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/achievements_controller.rb:5:in `index'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__1357535192544470707__process_action__4117888441117021607__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/achievements_controller_test.rb:9:in `block in <class:AchievementsControllerTest>'
+
+  4) Error:
+test_should_show_achievement(AchievementsControllerTest):
+AbstractController::ActionNotFound: The action 'show' could not be found for AchievementsController
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:116:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/achievements_controller_test.rb:28:in `block in <class:AchievementsControllerTest>'
+
+  5) Error:
+test_should_update_achievement(AchievementsControllerTest):
+NoMethodError: undefined method `resume_id' for #<Achievement:0x007f9d5e9de498>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/achievements_controller_test.rb:38:in `block in <class:AchievementsControllerTest>'
+
+  6) Error:
+test_should_create_basic(BasicsControllerTest):
+NoMethodError: undefined method `basics' for #<BasicsControllerTest:0x007f9d5e991c60>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/basics_controller_test.rb:5:in `block in <class:BasicsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__944033992151938119__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+  7) Error:
+test_should_destroy_basic(BasicsControllerTest):
+NoMethodError: undefined method `basics' for #<BasicsControllerTest:0x007f9d5ec6f3d8>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/basics_controller_test.rb:5:in `block in <class:BasicsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__944033992151938119__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+  8) Error:
+test_should_get_edit(BasicsControllerTest):
+NoMethodError: undefined method `basics' for #<BasicsControllerTest:0x007f9d5b0de738>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/basics_controller_test.rb:5:in `block in <class:BasicsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__944033992151938119__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+  9) Error:
+test_should_get_index(BasicsControllerTest):
+NoMethodError: undefined method `basics' for #<BasicsControllerTest:0x007f9d5ebc79a8>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/basics_controller_test.rb:5:in `block in <class:BasicsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__944033992151938119__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 10) Error:
+test_should_get_new(BasicsControllerTest):
+NoMethodError: undefined method `basics' for #<BasicsControllerTest:0x007f9d5c7de640>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/basics_controller_test.rb:5:in `block in <class:BasicsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__944033992151938119__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 11) Error:
+test_should_show_basic(BasicsControllerTest):
+NoMethodError: undefined method `basics' for #<BasicsControllerTest:0x007f9d5eb4c550>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/basics_controller_test.rb:5:in `block in <class:BasicsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__944033992151938119__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 12) Error:
+test_should_update_basic(BasicsControllerTest):
+NoMethodError: undefined method `basics' for #<BasicsControllerTest:0x007f9d5eaedf50>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/basics_controller_test.rb:5:in `block in <class:BasicsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__944033992151938119__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 13) Error:
+test_should_create_experience(ExperiencesControllerTest):
+NoMethodError: undefined method `resume_id' for #<Experience:0x007f9d5c4ade30>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/experiences_controller_test.rb:21:in `block (2 levels) in <class:ExperiencesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/experiences_controller_test.rb:20:in `block in <class:ExperiencesControllerTest>'
+
+ 14) Error:
+test_should_get_edit(ExperiencesControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/experiences_controller.rb:26:in `edit'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__1047626846925168770__process_action__4456323126642966560__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/experiences_controller_test.rb:33:in `block in <class:ExperiencesControllerTest>'
+
+ 15) Error:
+test_should_get_index(ExperiencesControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/experiences_controller.rb:5:in `index'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__1047626846925168770__process_action__4117888441117021607__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/experiences_controller_test.rb:9:in `block in <class:ExperiencesControllerTest>'
+
+ 16) Error:
+test_should_show_experience(ExperiencesControllerTest):
+AbstractController::ActionNotFound: The action 'show' could not be found for ExperiencesController
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:116:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/experiences_controller_test.rb:28:in `block in <class:ExperiencesControllerTest>'
+
+ 17) Error:
+test_should_update_experience(ExperiencesControllerTest):
+NoMethodError: undefined method `resume_id' for #<Experience:0x007f9d5ecb8600>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/experiences_controller_test.rb:38:in `block in <class:ExperiencesControllerTest>'
+
+ 18) Failure:
+test_should_create_feedback(FeedbacksControllerTest) [/Users/sagar/www/assignment/task1/seemyresu.me/test/functional/feedbacks_controller_test.rb:20]:
+"Feedback.count" didn't change by 1.
+<3> expected but was
+<2>.
+
+ 19) Error:
+test_should_destroy_feedback(FeedbacksControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :controller=>"feedbacks", :action=>"destroy"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:401:in `delete'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/feedbacks_controller_test.rb:44:in `block (2 levels) in <class:FeedbacksControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/feedbacks_controller_test.rb:43:in `block in <class:FeedbacksControllerTest>'
+
+ 20) Error:
+test_should_get_edit(FeedbacksControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :controller=>"feedbacks", :action=>"edit"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/feedbacks_controller_test.rb:33:in `block in <class:FeedbacksControllerTest>'
+
+ 21) Error:
+test_should_get_index(FeedbacksControllerTest):
+ActionController::RoutingError: No route matches {:controller=>"feedbacks"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/feedbacks_controller_test.rb:9:in `block in <class:FeedbacksControllerTest>'
+
+ 22) Error:
+test_should_show_feedback(FeedbacksControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :controller=>"feedbacks", :action=>"show"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/feedbacks_controller_test.rb:28:in `block in <class:FeedbacksControllerTest>'
+
+ 23) Error:
+test_should_update_feedback(FeedbacksControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :feedback=>{:description=>"Awesome it is. I like it.", :who=>"User1"}, :controller=>"feedbacks", :action=>"update"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:396:in `put'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/feedbacks_controller_test.rb:38:in `block in <class:FeedbacksControllerTest>'
+
+ 24) Error:
+test_should_create_resume_template(ResumeTemplatesControllerTest):
+ActionController::RoutingError: No route matches {:resume_template=>{:name=>"Colorful"}, :controller=>"resume_templates", :action=>"create"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:391:in `post'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:21:in `block (2 levels) in <class:ResumeTemplatesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:20:in `block in <class:ResumeTemplatesControllerTest>'
+
+ 25) Error:
+test_should_destroy_resume_template(ResumeTemplatesControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :controller=>"resume_templates", :action=>"destroy"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:401:in `delete'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:44:in `block (2 levels) in <class:ResumeTemplatesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:43:in `block in <class:ResumeTemplatesControllerTest>'
+
+ 26) Error:
+test_should_get_edit(ResumeTemplatesControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :controller=>"resume_templates", :action=>"edit"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:33:in `block in <class:ResumeTemplatesControllerTest>'
+
+ 27) Error:
+test_should_get_index(ResumeTemplatesControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/resume_templates_controller.rb:6:in `index'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__2749739866980818974__process_action__4117888441117021607__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:9:in `block in <class:ResumeTemplatesControllerTest>'
+
+ 28) Error:
+test_should_get_new(ResumeTemplatesControllerTest):
+ActionController::RoutingError: No route matches {:controller=>"resume_templates", :action=>"new"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:15:in `block in <class:ResumeTemplatesControllerTest>'
+
+ 29) Error:
+test_should_show_resume_template(ResumeTemplatesControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :controller=>"resume_templates", :action=>"show"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:28:in `block in <class:ResumeTemplatesControllerTest>'
+
+ 30) Error:
+test_should_update_resume_template(ResumeTemplatesControllerTest):
+ActionController::RoutingError: No route matches {:id=>"980190962", :resume_template=>{:name=>"Colorful"}, :controller=>"resume_templates", :action=>"update"}
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:532:in `raise_routing_error'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:528:in `rescue in generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:520:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:561:in `generate'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:557:in `generate_extras'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/routing/route_set.rb:553:in `extra_keys'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:147:in `assign_parameters'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:459:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:396:in `put'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resume_templates_controller_test.rb:38:in `block in <class:ResumeTemplatesControllerTest>'
+
+ 31) Error:
+test_should_create_resume(ResumesControllerTest):
+NoMethodError: undefined method `resumes' for #<ResumesControllerTest:0x007f9d5c0f8f88>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resumes_controller_test.rb:5:in `block in <class:ResumesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__2959206854231694013__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 32) Error:
+test_should_destroy_resume(ResumesControllerTest):
+NoMethodError: undefined method `resumes' for #<ResumesControllerTest:0x007f9d5eb5c590>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resumes_controller_test.rb:5:in `block in <class:ResumesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__2959206854231694013__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 33) Error:
+test_should_get_edit(ResumesControllerTest):
+NoMethodError: undefined method `resumes' for #<ResumesControllerTest:0x007f9d5e9de9e8>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resumes_controller_test.rb:5:in `block in <class:ResumesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__2959206854231694013__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 34) Error:
+test_should_get_index(ResumesControllerTest):
+NoMethodError: undefined method `resumes' for #<ResumesControllerTest:0x007f9d5ea83f88>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resumes_controller_test.rb:5:in `block in <class:ResumesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__2959206854231694013__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 35) Error:
+test_should_get_new(ResumesControllerTest):
+NoMethodError: undefined method `resumes' for #<ResumesControllerTest:0x007f9d5eec5c68>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resumes_controller_test.rb:5:in `block in <class:ResumesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__2959206854231694013__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 36) Error:
+test_should_show_resume(ResumesControllerTest):
+NoMethodError: undefined method `resumes' for #<ResumesControllerTest:0x007f9d5ed31938>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resumes_controller_test.rb:5:in `block in <class:ResumesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__2959206854231694013__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 37) Error:
+test_should_update_resume(ResumesControllerTest):
+NoMethodError: undefined method `resumes' for #<ResumesControllerTest:0x007f9d5b0dffc0>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_dispatch/testing/assertions/routing.rb:176:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/resumes_controller_test.rb:5:in `block in <class:ResumesControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:462:in `_run__2959206854231694013__setup__4312979933624990663__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_setup_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/setup_and_teardown.rb:35:in `run'
+
+ 38) Error:
+test_should_create_school(SchoolsControllerTest):
+NoMethodError: undefined method `resume_id' for #<School:0x007f9d5e9cf880>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/schools_controller_test.rb:21:in `block (2 levels) in <class:SchoolsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/schools_controller_test.rb:20:in `block in <class:SchoolsControllerTest>'
+
+ 39) Error:
+test_should_get_edit(SchoolsControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/schools_controller.rb:26:in `edit'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__3802707681454162797__process_action__4456323126642966560__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/schools_controller_test.rb:33:in `block in <class:SchoolsControllerTest>'
+
+ 40) Error:
+test_should_get_index(SchoolsControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/schools_controller.rb:5:in `index'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__3802707681454162797__process_action__4117888441117021607__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/schools_controller_test.rb:9:in `block in <class:SchoolsControllerTest>'
+
+ 41) Error:
+test_should_show_school(SchoolsControllerTest):
+AbstractController::ActionNotFound: The action 'show' could not be found for SchoolsController
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:116:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/schools_controller_test.rb:28:in `block in <class:SchoolsControllerTest>'
+
+ 42) Error:
+test_should_update_school(SchoolsControllerTest):
+NoMethodError: undefined method `resume_id' for #<School:0x007f9d5e95e928>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/schools_controller_test.rb:38:in `block in <class:SchoolsControllerTest>'
+
+ 43) Error:
+test_should_create_skill(SkillsControllerTest):
+NoMethodError: undefined method `resume_id' for #<Skill:0x007f9d5efc1608>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/skills_controller_test.rb:21:in `block (2 levels) in <class:SkillsControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/skills_controller_test.rb:20:in `block in <class:SkillsControllerTest>'
+
+ 44) Error:
+test_should_get_edit(SkillsControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/skills_controller.rb:26:in `edit'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__3791664641524527679__process_action__4456323126642966560__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/skills_controller_test.rb:33:in `block in <class:SkillsControllerTest>'
+
+ 45) Error:
+test_should_get_index(SkillsControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/skills_controller.rb:5:in `index'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__3791664641524527679__process_action__4117888441117021607__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/skills_controller_test.rb:9:in `block in <class:SkillsControllerTest>'
+
+ 46) Error:
+test_should_show_skill(SkillsControllerTest):
+AbstractController::ActionNotFound: The action 'show' could not be found for SkillsController
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:116:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/skills_controller_test.rb:28:in `block in <class:SkillsControllerTest>'
+
+ 47) Error:
+test_should_update_skill(SkillsControllerTest):
+NoMethodError: undefined method `resume_id' for #<Skill:0x007f9d5eeedd58>
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activemodel-3.2.7/lib/active_model/attribute_methods.rb:407:in `method_missing'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/attribute_methods.rb:149:in `method_missing'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/skills_controller_test.rb:38:in `block in <class:SkillsControllerTest>'
+
+ 48) Failure:
+test_should_create_user(UsersControllerTest) [/Users/sagar/www/assignment/task1/seemyresu.me/test/functional/users_controller_test.rb:20]:
+"User.count" didn't change by 1.
+<5> expected but was
+<4>.
+
+ 49) Error:
+test_should_destroy_user(UsersControllerTest):
+AbstractController::ActionNotFound: The action 'destroy' could not be found for UsersController
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:116:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:401:in `delete'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/users_controller_test.rb:44:in `block (2 levels) in <class:UsersControllerTest>'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/testing/assertions.rb:55:in `assert_difference'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/users_controller_test.rb:43:in `block in <class:UsersControllerTest>'
+
+ 50) Error:
+test_should_get_edit(UsersControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/users_controller.rb:201:in `edit'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__2394538479630794806__process_action__4456323126642966560__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/users_controller_test.rb:33:in `block in <class:UsersControllerTest>'
+
+ 51) Error:
+test_should_get_index(UsersControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/users_controller.rb:169:in `index'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__2394538479630794806__process_action__4117888441117021607__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/users_controller_test.rb:9:in `block in <class:UsersControllerTest>'
+
+ 52) Error:
+test_should_show_user(UsersControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/users_controller.rb:180:in `show'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__2394538479630794806__process_action__2166497757511677821__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:386:in `get'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/users_controller_test.rb:28:in `block in <class:UsersControllerTest>'
+
+ 53) Error:
+test_should_update_user(UsersControllerTest):
+ActiveRecord::RecordNotFound: Couldn't find User without an ID
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:310:in `find_with_ids'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/querying.rb:5:in `find'
+    /Users/sagar/www/assignment/task1/seemyresu.me/app/controllers/users_controller.rb:223:in `update'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:167:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rendering.rb:10:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:436:in `_run__2394538479630794806__process_action__4598280206585384026__callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:405:in `__run_callback'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/callbacks.rb:81:in `run_callbacks'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/rescue.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `block in instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activesupport-3.2.7/lib/active_support/notifications.rb:123:in `instrument'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/activerecord-3.2.7/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/base.rb:121:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/abstract_controller/rendering.rb:45:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/metal/testing.rb:17:in `process_with_new_base_test'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:469:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:49:in `process'
+    /Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/actionpack-3.2.7/lib/action_controller/test_case.rb:396:in `put'
+    /Users/sagar/www/assignment/task1/seemyresu.me/test/functional/users_controller_test.rb:38:in `block in <class:UsersControllerTest>'
+
+70 tests, 26 assertions, 2 failures, 51 errors, 0 skips
+Errors running test:functionals! #<RuntimeError: Command failed with status (53): [ruby -I"lib:test" -I"/Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/rake-10.1.0/lib" "/Users/sagar/.rvm/gems/ruby-1.9.3-p194@3.2.7/gems/rake-10.1.0/lib/rake/rake_test_loader.rb" "test/functional/**/*_test.rb" ]>

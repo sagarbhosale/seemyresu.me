@@ -1,4 +1,12 @@
 class ResumeTemplatesController < ApplicationController
+  before_filter :logged_in
+
+  def logged_in
+    if session[:user_id] == nil
+      redirect_to "/", notice: "Please login"
+    end
+  end
+
   # GET /resume_templates
   # GET /resume_templates.json
   def index

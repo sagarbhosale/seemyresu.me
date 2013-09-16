@@ -1,25 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-sagar:
+one:
   firstname: Sagar
   lastname: Bhosale
   email: sagarbhosale019@gmail.com
-  password_hash: MyString
+  password_hash: a94a8fe5ccb19ba61c4c0873d391e987982fbbd3 # test
+  resume_template: 1123
 
-gautami:
+two:
   firstname: Gautami
   lastname: Deshpande
   email: gautami.v.deshpande@gmail.com
-  password_hash: MyString
+  password_hash: a94a8fe5ccb19ba61c4c0873d391e987982fbbd3 # test
+  resume_template: 1123
 
-shardul:
+three:
   firstname: Shardul
   lastname: Bagade
   email: sharduul@gmail.com
-  password_hash: MyString
+  password_hash: a94a8fe5ccb19ba61c4c0873d391e987982fbbd3 # test
+  resume_template: 1123
 
-mrunmayee:
+four:
   firstname: Mrunmayee
   lastname: Deshpande
   email: mdeshpande@gmail.com
-  password_hash: MyString
+  password_hash: a94a8fe5ccb19ba61c4c0873d391e987982fbbd3 # test
+  resume_template: 1123

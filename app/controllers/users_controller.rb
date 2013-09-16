@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
 
+  before_filter :logged_in, :except => [:resume, :confirmuser, :comfiruser, :newtmp, :authenticate]
+
+  def logged_in
+    if session[:user_id] == nil
+      redirect_to "/", notice: "Please login"
+    end
+  end
+
   def resume
     @user = User.find(params[:id])
     if( @user )
@@ -39,7 +47,11 @@ class UsersController < ApplicationController
   end
 
   def sharing
-    @user = User.find(session[:user_id])
+    begin
+      @user = User.find(session[:user_id])
+    rescue
+      redirect_to "/"
+    end
   end
 
   def changetemplate
@@ -96,7 +108,7 @@ class UsersController < ApplicationController
       @tmpuser.destroy
       session[:user_id] = user.id
       flash[:success] = "Welcome :)"
-      redirect_to "/users"
+      redirect_to "/"
     rescue
       flash[:error] = "Something went wrong."
       redirect_to "/welcome/index"
@@ -144,7 +156,7 @@ class UsersController < ApplicationController
           render :text => "OK", :content_type => Mime::TEXT
           return
         else
-          redirect_to "/users"
+          redirect_to "/"
         return
         end
       else
@@ -163,16 +175,16 @@ class UsersController < ApplicationController
       redirect_to "/welcome/index"
   end 
 
-  # GET /users
-  # GET /users.json
-  def index
-    @user = User.find(session[:user_id])
-    @experiences = @resume.experiences
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @experiences }
-    end
-  end
+  # # GET /users
+  # # GET /users.json
+  # def index
+  #   @user = User.find(session[:user_id])
+  #   @experiences = @user.experiences
+  #   respond_to do |format|
+  #     format.html # index.html.erb
+  #     format.json { render json: @experiences }
+  #   end
+  # end
 
   # GET /users/1
   # GET /users/1.json
@@ -185,52 +197,52 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/new
-  # GET /users/new.json
-  def new
-    @user = User.new
+  # # GET /users/new
+  # # GET /users/new.json
+  # def new
+  #   @user = User.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @user }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html # new.html.erb
+  #     format.json { render json: @user }
+  #   end
+  # end
 
   # GET /users/1/edit
   def edit
     @user = User.find(session[:user_id])
   end
 
-  # POST /users
-  # POST /users.json
-  def create
-    @user = User.new(params[:user])
+  # # POST /users
+  # # POST /users.json
+  # def create
+  #   @user = User.new(params[:user])
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @user.save
+  #       format.html { redirect_to @user, notice: 'User was successfully created.' }
+  #       format.json { render json: @user, status: :created, location: @user }
+  #     else
+  #       format.html { render action: "new" }
+  #       format.json { render json: @user.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
-  # PUT /users/1
-  # PUT /users/1.json
-  def update
-    @user = User.find(session[:user_id])
+  # # PUT /users/1
+  # # PUT /users/1.json
+  # def update
+  #   @user = User.find(session[:user_id])
 
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to "/profile", notice: 'User was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @user.update_attributes(params[:user])
+  #       format.html { redirect_to "/profile", notice: 'User was successfully updated.' }
+  #       format.json { head :no_content }
+  #     else
+  #       format.html { render action: "edit" }
+  #       format.json { render json: @user.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
 end

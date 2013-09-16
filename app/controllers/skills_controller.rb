@@ -1,4 +1,12 @@
 class SkillsController < ApplicationController
+  before_filter :logged_in
+
+  def logged_in
+    if session[:user_id] == nil
+      redirect_to "/", notice: "Please login"
+    end
+  end
+
   # GET /skills
   # GET /skills.json
   def index
