@@ -1,23 +1,32 @@
-<%= form_for(@school) do |f| %>
+<%= form_for @school, :validate => true do |f| %>
   <div class="field">
     <%= f.label :from %><br />
-    <%= f.date_select :from %>
+    <%= f.date_select :from %><br/>
+    <span class="fieldtip">when did you join?</span>
   </div>
+
   <div class="field">
     <%= f.label :to %><br />
-    <%= f.date_select :to %>
+    <%= f.date_select :to %><br/>
+    <span class="fieldtip">when did you leave?</span>
   </div>
+
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name %><br/>
+    <span class="fieldtip">name of the organization</span>
   </div>
+
   <div class="field">
     <%= f.label :website %><br />
-    <%= f.text_field :website %>
+    <%= f.text_field :website %><br/>
+    <span class="fieldtip">organization's website</span>
   </div>
+
   <div class="field">
-    <%= f.label :desc %><br />
-    <%= f.text_field :desc %>
+    <%= f.label "Degree earned" %><br />
+    <%= f.text_field :desc %><br/>
+    <span class="fieldtip">your major</span>
   </div>
   <div class="actions">
     <%= f.submit "Add School", class: "btn btn-primary" %>

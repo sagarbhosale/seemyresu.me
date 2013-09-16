@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :logged_in, :except => [:resume, :confirmuser, :comfiruser, :newtmp, :authenticate]
+  before_filter :logged_in, :except => [:resume, :confirmuser, :confirmemail, :newtmp, :authenticate]
 
   def logged_in
     if session[:user_id] == nil
@@ -229,20 +229,20 @@ class UsersController < ApplicationController
   #   end
   # end
 
-  # # PUT /users/1
-  # # PUT /users/1.json
-  # def update
-  #   @user = User.find(session[:user_id])
+  # PUT /users/1
+  # PUT /users/1.json
+  def update
+    @user = User.find(session[:user_id])
 
-  #   respond_to do |format|
-  #     if @user.update_attributes(params[:user])
-  #       format.html { redirect_to "/profile", notice: 'User was successfully updated.' }
-  #       format.json { head :no_content }
-  #     else
-  #       format.html { render action: "edit" }
-  #       format.json { render json: @user.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to "/profile", notice: 'User was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 end

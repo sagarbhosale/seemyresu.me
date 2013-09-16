@@ -36,23 +36,23 @@ class SchoolsController < ApplicationController
     @school = School.new
   end
 
-  # # POST /schools
-  # # POST /schools.json
-  # def create
-  #   params[:school][:user_id] = session[:user_id]
-  #   @school = School.new(params[:school])
+  # POST /schools
+  # POST /schools.json
+  def create
+    params[:school][:user_id] = session[:user_id]
+    @school = School.new(params[:school])
 
-  #   respond_to do |format|
-  #     if @school.save
-  #       format.html { redirect_to "/schools", notice: 'School was successfully created.' }
-  #       format.json { render json: @school, status: :created, location: @school }
-  #     else
-  #       # TODO show error
-  #       format.html { render action: "new" }
-  #       format.json { render json: @school.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @school.save
+        format.html { redirect_to "/schools", notice: 'School was successfully created.' }
+        format.json { render json: @school, status: :created, location: @school }
+      else
+        # TODO show error
+        format.html { render action: "new" }
+        format.json { render json: @school.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # PUT /schools/1
   # PUT /schools/1.json

@@ -35,14 +35,14 @@ SeemyresuMe::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  config.action_mailer.default_url_options = { :host => '10.0.0.10:3000' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   ActionMailer::Base.smtp_settings = {  
     :address              => "smtp.gmail.com",  
-    :port                 => 587,  
+    :port                 => 587,
     :domain               => "gmail.com",  
-    :user_name            => "sagarbhonsle@gmail.com",  
-    :password             => "mygmailpassword",
+    :user_name            => "<yourgmailid>",  
+    :password             => "<gmailpassword>",
     :authentication       => "plain",
     :enable_starttls_auto => true
   }

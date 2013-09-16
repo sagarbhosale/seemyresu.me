@@ -20,4 +20,11 @@ class User < ActiveRecord::Base
   has_many :skills
   has_many :achievements
 
+  after_initialize :default_values
+  private
+    def default_values
+      self.views ||= 0
+      self.resume_template ||= 1
+    end
+
 end

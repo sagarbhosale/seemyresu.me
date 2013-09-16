@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(:version => 20130913100938) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "basics", :force => true do |t|
+    t.string   "resume_id"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "mobile"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "experiences", :force => true do |t|
     t.integer  "user_id"
     t.date     "from"
